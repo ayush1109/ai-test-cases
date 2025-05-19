@@ -4,11 +4,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 # Optional: Use your own Chrome instance by uncommenting:
-# browser = Browser(
-#     config=BrowserConfig(
-#         chrome_instance_path='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', 
-#     )
-# )
+browser = Browser(
+    config=BrowserConfig(
+        headless=True
+    )
+)
 async def main():
     agent = Agent(
         task="Go to https://www.saucedemo.com/ and generate functional test cases for the website. Please give output in simple english sentences.",
