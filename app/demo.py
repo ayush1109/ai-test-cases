@@ -13,7 +13,7 @@ async def main():
     agent = Agent(
         task="Go to https://www.saucedemo.com/ and generate functional test cases for the website. Please give output in simple english sentences.",
         llm=ChatGoogleGenerativeAI(model="gemini-2.0-flash"),
-        # browser=browser  # Uncomment to use your own Chrome browser
+        browser=browser  # Uncomment to use your own Chrome browser
     )
     result = await agent.run()
     # print(str(result.final_result).split('done\': {\'text\':')[1].split(',')[0])
