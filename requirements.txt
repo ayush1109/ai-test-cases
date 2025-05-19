@@ -2,3 +2,4 @@
 Flask
 langchain_google_genai
 browser_use
+playwright
